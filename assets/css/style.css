@@ -155,12 +155,13 @@ nav ul a:hover::after {
 }
 
 #home h1 span {
-    color: #000;
+    position: relative;
+    color: rgba(10, 150, 50);
 }
 
 #home p{
     color: #fff;
-    font-weight: 900;
+    font-size: 16px;
 }
 
 
@@ -219,6 +220,7 @@ nav ul a:hover::after {
 #ankara .pro img {
     width: 220px;
     border-radius: 20px;
+    max-height: fit-content;
 }
 
 #ankara .pro .des span {
