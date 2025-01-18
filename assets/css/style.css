@@ -130,7 +130,7 @@ nav ul a:hover::after {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 155vh;
     background-image: url("../img/t6.jpg");
     background-size: cover;
     background-position: center;
@@ -184,7 +184,83 @@ nav ul a:hover::after {
     background-color: rgba(200, 150, 50);
 }
 
+/* Ankara Designs*/
 
+#ankara {
+  text-align: center;
+  background-color: #fff;
+}
+
+#ankara .pro-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+#ankara .pro {
+    background-color: #000;
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid rgba(200, 150, 50);
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(200, 150, 50, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+#ankara .pro:hover {
+    box-shadow: 20px 20px 30px rgba(200, 150, 50, 0.2);
+}
+
+#ankara .pro img {
+    width: 220px;
+    border-radius: 20px;
+}
+
+#ankara .pro .des span {
+    color: #e8f6ea;
+    font-size: 12px;
+}
+
+#ankara .pro .des h5 {
+  padding-top: 7px;
+  color: #fff;
+  font-size: 15px;
+}
+
+#ankara .pro .des i {
+  font-size: 12px;
+  color: rgb(243, 181, 25);
+}
+
+#ankara .pro .des h4 {
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(200, 150, 50);
+}
+
+#ankara .pro i {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid rgba(200, 150, 50);
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  transition: .3s ease;
+}
+
+#ankara .pro i:hover {
+    color: rgba(200, 150, 50);
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -227,5 +303,12 @@ nav ul a:hover::after {
 
     .navbutton {
         display: block;
+    }
+
+    #ankara .pro-container {
+        justify-content: center;
+    }
+    #ankara .pro {
+        margin: 15px;
     }
 }
