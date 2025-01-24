@@ -15,7 +15,7 @@ ScrollReveal().reveal('.home-container h, .pro-container', { origin: 'right' });
 
 /*================ typed Text =========== */
 const typed = new Typed('.multiple-text', {
-    strings: ['Custom Tailoring Services', 'Boutique Sales', 'Fabric and Design Advisory'],
+    strings: ['Tailoring Services', 'Boutique Sales', 'Kitenge Designs'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
