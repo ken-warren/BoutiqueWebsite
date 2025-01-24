@@ -8,7 +8,7 @@ ScrollReveal ({
 });
 
 ScrollReveal().reveal('.home-container, h2, .pro-container img', { origin: 'top' });
-ScrollReveal().reveal('#home, .home-container p, .home-container button', { origin: 'bottom' });
+ScrollReveal().reveal('#home, .home-container p, h3, .home-container button', { origin: 'bottom' });
 ScrollReveal().reveal('.home-container h1, .des', { origin: 'left' });
 ScrollReveal().reveal('.home-container h, .pro-container', { origin: 'right' });
 

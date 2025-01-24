@@ -27,17 +27,22 @@ body {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 28px;
   color: #0a0a0a;
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 20px;
   color: #000;
 }
 
+h3 {
+  font-size: 18px;
+  color: #1a1a1a;
+}
+
 p {
-  font-size: 24px;
+  font-size: 16px;
   color: #000;
 }
 
@@ -54,19 +59,13 @@ p {
   font-family: cursive;
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
 .navbar {
   background-color: #000;
   box-shadow: 0 5px 15px rgba(200, 150, 50, 0.2);
-  z-index: 999;
+  z-index: 1000;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 10vh;
   border-top: 1px solid transparent;
@@ -79,18 +78,19 @@ nav {
 }
 
 .navbar ul {
-  float: right;
   display: flex;
   list-style: none;
   gap: 15px;
   background-color: #000;
+  padding: 0;
+  margin: 0;
 }
 
-.navbar ul li {
+.navbar li {
   position: relative;
 }
 
-.navbar ul li a {
+.navbar a {
   text-decoration: none;
   color: #fff;
   font-weight: 600;
@@ -99,20 +99,20 @@ nav {
   transition: 0.3s ease;
 }
 
-a:hover,
-a.active {
+.navbar a:hover,
+.navbar a:active {
   color: rgba(200, 150, 50);
 }
 
 .navbar ul a.active::after,
 .navbar ul a:hover::after {
   content: "";
-  width: 30%;
+  width: 20%;
   height: 2px;
   background: rgba(200, 150, 50);
   position: absolute;
   bottom: 0;
-  left: 20px;
+  left: 15px;
 }
 
 .navbutton {
@@ -120,11 +120,20 @@ a.active {
   color: #fff;
   cursor: pointer;
   display: none;
-  transition: 0.3s ease;
 }
 
 .navbutton i:hover {
   color: rgba(200, 150, 50);
+}
+
+#check:checked ~ .navbar ul {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%; /* Dropdown below the navbar */
+  left: 0;
+  width: 100%;
+  background: #000;
 }
 
 #check {
@@ -137,6 +146,7 @@ a.active {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  width: 100%;
   margin-top: 0;
   padding: 0;
   position: relative; /* For overlay positioning */
@@ -174,7 +184,7 @@ a.active {
   padding: 20px;
   border-radius: 30px;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0;
   background: rgba(0, 0, 0, 0.6);
 }
 
@@ -257,7 +267,7 @@ a.active {
 }
 
 .pro-container {
-    height: 95vh;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
@@ -325,6 +335,254 @@ a.active {
   color: rgba(200, 150, 50);
 }
 
+/* About Section */
+#about {
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+  position: relative;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#about img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+  margin: 0 30px;
+}
+
+/* About */
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about-content h2 {
+  font-size: 24px;
+  color: #000;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.about-content p {
+  margin: 5px;
+}
+
+/* Newsletter Section Styling */
+#newsletter {
+  padding: 60px 20px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+}
+
+#newsletter h2 {
+  margin-bottom: 15px;
+}
+
+#newsletter p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+#newsletter p span {
+  font-weight: bold;
+  color: #000;
+  background-color: rgba(200, 150, 50);
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+#newsletter .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#newsletter .form input {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #000;
+  border-radius: 25px;
+  outline: none;
+  width: 300px;
+  max-width: 100%;
+  color: #1a1a1a;
+  background-color: rgb(200, 150.5);
+  transition: all 0.3s ease;
+}
+
+#newsletter .form input:focus {
+  border-color: #000;
+  background-color: #f8f8f8;
+}
+
+#newsletter .form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#newsletter .form button:hover {
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+}
+
+/* Contact*/
+#contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+  background-color: #fff; /* White theme background */
+  color: #000;
+  text-align: left;
+}
+
+#contact-details .details {
+  flex: 1;
+  padding: 20px;
+}
+
+#contact-details .details span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+#contact-details .details h2 {
+  margin: 10px 0 20px;
+}
+
+#contact-details .details li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 50px 0;
+  font-size: 16px;
+}
+
+#contact-details .details li i {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #000;
+}
+
+#contact-details .details p {
+  margin: 0;
+}
+
+#contact-details .map {
+  flex: 3;
+  padding: 20px;
+}
+
+#contact-details .map iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* FOOTER*/
+/* Footer Styling */
+footer.section-p1 {
+  background-color: #f8f8f8; /* Black background */
+  color: #000; /* White text for contrast */
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: "Poppins", sans-serif;
+}
+
+footer .col {
+  flex: 1;
+  margin: 20px;
+  min-width: 250px;
+}
+
+footer .logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+footer h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+footer p {
+  font-size: 12px;
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+footer a {
+  text-decoration: none;
+  color: #1b1b1b;
+  display: block;
+  margin: 8px 0;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: rgba(200, 150, 50); /* Accent color on hover */
+}
+
+footer .socials h3 {
+  margin-top: 20px;
+}
+
+footer .icon {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+footer .icon i {
+  font-size: 20px;
+  color: #1b1b1b;
+  transition: color 0.3s, transform 0.3s;
+}
+
+footer .icon i:hover {
+  color: rgba(200, 150, 50);
+  transform: scale(1.1);
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+  border-top: 0 solid #000;
+  padding-top: 15px;
+  font-size: 12px;
+  color: #000;
+}
+
+/* Secure Payment Image */
+footer img {
+  margin-top: 15px 0;
+  max-width: 200px;
+}
+
 /* Responsive Design */
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
@@ -336,7 +594,6 @@ a.active {
     top: 50px;
     right: 0;
     height: 100vh;
-    background-color: #000;
     width: 70%;
     box-shadow: 0 5px 15px rgba(200, 150, 50, 0.2);
     padding: 20px 0;
@@ -355,6 +612,10 @@ a.active {
 
   .navbutton {
     display: block;
+  }
+
+  .navbar ul {
+    display: none; /* Hide menu by default on small screens */
   }
 
   #check:checked ~ ul {
@@ -420,38 +681,78 @@ a.active {
     line-height: 30px;
     font-size: 12px;
   }
+
+  /*contact section*/
+  #contact-details {
+    flex-direction: column;
+  }
+
+  #contact-details .details,
+  #contact-details .map {
+    padding: 10px;
+  }
+
+  #contact-details .map iframe {
+    height: 250px;
+  }
+
+  /*footer section*/
+  footer.section-p1 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer .col {
+    margin: 20px auto;
+  }
+
+  footer .icon {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 480px) {
   /* Navigation Bar */
+  .navbar {
+    height: 8vh;
+  }
+
   nav ul li {
-    margin: 10px 15px;
+    margin: 20px 10px;
   }
 
   nav ul li a {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .navbutton {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   /* Home Section */
+  #home {
+    height: 80vh;
+  }
+
+  .home-container {
+    height: auto;
+  }
+
   .home-text h2 {
-    font-size: 24px;
+    font-size: 18px;
   }
 
   .home-text h1 {
-    font-size: 28px;
+    font-size: 20px;
   }
 
   .home-text p {
-    font-size: 0.9rem;
+    font-size: 14px;
   }
 
   .home-button {
     padding: 8px 15px;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   /* Ankara Section */
@@ -475,4 +776,3 @@ a.active {
     font-size: 10px;
   }
 }
-
