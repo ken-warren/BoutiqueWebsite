@@ -12,18 +12,24 @@
 html {
   scroll-behavior: smooth;
   font-family: sans-serif;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
+  background-image: url("../img/t6.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   padding-top: 0;
   margin: 0;
+  overflow-x: hidden;
+  line-height: 1.6;
 }
 
 .section {
   padding: 0;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 h1 {
@@ -71,10 +77,12 @@ p {
   border-top: 1px solid transparent;
   left: 0;
   top: 0;
-  padding: 10px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .navbar ul {
@@ -150,11 +158,6 @@ p {
   margin-top: 0;
   padding: 0;
   position: relative; /* For overlay positioning */
-  background-image: url("../img/t6.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
   color: #fff;
   text-align: center;
   z-index: 1;
@@ -268,18 +271,20 @@ p {
 
 .pro-container {
   height: auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin: 20px 0;
-  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .pro {
   background-color: rgba(0, 0, 0);
   border: 1px solid rgba(200, 150, 50);
-  border-radius: 5px;
+  border-radius: 15px;
+   margin: 20px 0;
+  padding: 10px 12px;
   overflow: hidden;
+  cursor: pointer;
+  position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -500,7 +505,7 @@ p {
 
 /* FOOTER*/
 /* Footer Styling */
-footer.section-p1 {
+footer.section {
   background-color: #f8f8f8; /* Black background */
   color: #000; /* White text for contrast */
   padding: 40px 20px;
@@ -587,6 +592,9 @@ footer img {
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
   /* Navigation Bar */
+  .logo {
+    font-size: 20px;
+  }
   nav ul {
     display: none;
     flex-direction: column;
@@ -713,6 +721,10 @@ footer img {
 
 @media (max-width: 480px) {
   /* Navigation Bar */
+  .logo {
+    font-size: 18px;
+  }
+
   .navbar {
     height: 8vh;
   }
@@ -757,11 +769,18 @@ footer img {
 
   /* Ankara Section */
   #ankara img {
-    max-width: 150px;
+    width: 100%;
+    height: auto;
   }
 
   #ankara .pro {
-    padding: 8px;
+    max-width: 150px;
+    padding: 5px;
+    max-height: auto;
+  }
+
+  #ankara .pro-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   #ankara .pro .des h5,
@@ -774,5 +793,96 @@ footer img {
     height: 25px;
     line-height: 25px;
     font-size: 10px;
+  }
+
+  /*About section*/
+  .about-container {
+    display: block;
+  }
+
+  #about img {
+    border-radius: 2px;
+    margin: 20px 10px;
+    max-width: 100%;
+    height: auto;
+  }
+  /* newsletter section*/
+  #newsletter {
+    padding: 30px 10px;
+  }
+
+  #newsletter h2 {
+    margin-bottom: 10px;
+  }
+
+  #newsletter p {
+    font-size: 16px;
+    line-height: 36px;
+  }
+
+  #newsletter p span {
+    padding: 1px 4px;
+    border-radius: 5px;
+  }
+
+  #newsletter .form {
+    display: grid;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /*Contact*/
+  #contact-details {
+    padding: 30px 10px;
+    text-align: center;
+  }
+
+  #contact-details .details {
+    padding: 5px;
+  }
+
+  #contact-details .details li {
+    margin: 20px 0;
+  }
+
+  #contact-details .details li i {
+    font-size: 16px;
+  }
+
+  #contact-details .map {
+    flex: 1;
+    padding: 5px;
+  }
+
+  /* footer section*/
+  footer.section {
+    padding: 20px 10px;
+  }
+
+  footer .col {
+    margin: 5px;
+    min-width: 50px;
+  }
+
+  footer h3 {
+    margin-bottom: 5px;
+  }
+
+  footer p {
+    line-height: 1.2;
+  }
+
+  footer a:hover {
+    color: rgba(200, 150, 50); /* Accent color on hover */
+  }
+
+  footer .icon i:hover {
+    color: rgba(200, 150, 50);
+    transform: scale(1.1);
+  }
+
+  footer .copyright {
+    margin-top: 0;
+    padding-top: 1px;
   }
 }
