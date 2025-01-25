@@ -750,7 +750,7 @@ footer img {
 
   /* Home Section */
   #home {
-    height: auto;
+    height: 100vh;
   }
 
   .home-container {
