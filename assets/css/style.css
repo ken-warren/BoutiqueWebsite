@@ -277,6 +277,9 @@ p {
 #ankara {
   padding: 50px 20px;
   text-align: center;
+    opacity: 1;
+  transform: none; /* Ensure no transforms hide the element */
+  visibility: visible;
 }
 
 .pro-container {
@@ -304,6 +307,7 @@ p {
 }
 
 #ankara img {
+  display: block;
   width: 220px;
   border-radius: 20px;
   max-height: 200px;
@@ -716,7 +720,6 @@ footer img {
   /*footer section*/
   footer.section {
     flex-direction: column;
-    text-align: center;
   }
 
   footer .col {
