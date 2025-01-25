@@ -245,15 +245,18 @@ p {
 }
 
 .home-socials {
-  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
   display: flex;
   gap: 15px;
 }
 
 .home-socials a {
-  font-size: 1.5rem;
+  font-size: 20px;
   color: #fff;
   transition: 0.3s ease;
+  justify-content: center;
 }
 
 .home-socials a:hover {
@@ -280,7 +283,7 @@ p {
   background-color: rgba(0, 0, 0);
   border: 1px solid rgba(200, 150, 50);
   border-radius: 15px;
-   margin: 20px 0;
+  margin: 20px 0;
   padding: 10px 12px;
   overflow: hidden;
   cursor: pointer;
