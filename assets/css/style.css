@@ -9,6 +9,16 @@
     sans-serif;
 }
 
+html, 
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
   font-family: sans-serif;
@@ -20,21 +30,20 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  padding-top: 0;
-  margin: 0;
-  overflow-x: hidden;
-  line-height: 1.6;
 }
 
 .section {
+  position: relative;
+  z-index: 1;  
   padding: 0;
-  max-width: 1400px;
-  margin: 0 auto;
+  margin: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) ;
 }
 
 h1 {
   font-size: 28px;
-  color: #0a0a0a;
+  color: #000;
 }
 
 h2 {
@@ -266,9 +275,7 @@ p {
 /* Ankara Designs*/
 
 #ankara {
-  margin-top: 30px;
-  padding: 0;
-  background: #fff;
+  padding: 50px 20px;
   text-align: center;
 }
 
@@ -346,9 +353,7 @@ p {
 /* About Section */
 #about {
   padding: 50px 20px;
-  background-color: #f8f8f8;
   text-align: center;
-  position: relative;
 }
 
 .about-container {
@@ -450,21 +455,19 @@ p {
 }
 
 /* Contact*/
-#contact-details {
+#contact {
   display: flex;
   flex-wrap: wrap;
-  padding: 60px 20px;
-  background-color: #fff; /* White theme background */
-  color: #000;
+  padding: 50px 20px;
   text-align: left;
 }
 
-#contact-details .details {
+#contact .details {
   flex: 1;
-  padding: 20px;
+  padding: 15px;
 }
 
-#contact-details .details span {
+#contact .details span {
   font-size: 18px;
   font-weight: bold;
   color: #000;
@@ -472,34 +475,34 @@ p {
   display: inline-block;
 }
 
-#contact-details .details h2 {
-  margin: 10px 0 20px;
+#contact .details h2 {
+  margin: 10px 0;
 }
 
-#contact-details .details li {
+#contact .details li {
   list-style: none;
   display: flex;
   align-items: center;
-  margin: 50px 0;
+  margin: 20px 0;
   font-size: 16px;
 }
 
-#contact-details .details li i {
+#contact .details li i {
   font-size: 20px;
   margin-right: 10px;
   color: #000;
 }
 
-#contact-details .details p {
+#contact .details p {
   margin: 0;
 }
 
-#contact-details .map {
+#contact .map {
   flex: 3;
   padding: 20px;
 }
 
-#contact-details .map iframe {
+#contact .map iframe {
   width: 100%;
   height: 350px;
   border: none;
@@ -598,6 +601,7 @@ footer img {
   .logo {
     font-size: 20px;
   }
+
   nav ul {
     display: none;
     flex-direction: column;
@@ -694,21 +698,21 @@ footer img {
   }
 
   /*contact section*/
-  #contact-details {
+  #contact {
     flex-direction: column;
   }
 
-  #contact-details .details,
-  #contact-details .map {
+  #contact .details,
+  #contact .map {
     padding: 10px;
   }
 
-  #contact-details .map iframe {
+  #contact .map iframe {
     height: 250px;
   }
 
   /*footer section*/
-  footer.section-p1 {
+  footer.section {
     flex-direction: column;
     text-align: center;
   }
@@ -746,7 +750,7 @@ footer img {
 
   /* Home Section */
   #home {
-    height: 80vh;
+    height: auto;
   }
 
   .home-container {
@@ -835,24 +839,24 @@ footer img {
   }
 
   /*Contact*/
-  #contact-details {
+  #contact {
     padding: 30px 10px;
     text-align: center;
   }
 
-  #contact-details .details {
+  #contact .details {
     padding: 5px;
   }
 
-  #contact-details .details li {
+  #contact .details li {
     margin: 20px 0;
   }
 
-  #contact-details .details li i {
+  #contact .details li i {
     font-size: 16px;
   }
 
-  #contact-details .map {
+  #contact .map {
     flex: 1;
     padding: 5px;
   }
