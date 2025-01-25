@@ -9,7 +9,7 @@
     sans-serif;
 }
 
-html, 
+html,
 body {
   margin: 0;
   padding: 0;
@@ -38,7 +38,7 @@ body {
   padding: 0;
   margin: 0;
   background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) ;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -277,9 +277,6 @@ p {
 #ankara {
   padding: 50px 20px;
   text-align: center;
-    opacity: 1;
-  transform: none; /* Ensure no transforms hide the element */
-  visibility: visible;
 }
 
 .pro-container {
@@ -307,7 +304,6 @@ p {
 }
 
 #ankara img {
-  display: block;
   width: 220px;
   border-radius: 20px;
   max-height: 200px;
@@ -544,7 +540,7 @@ footer h3 {
 }
 
 footer p {
- color: gray;
+  color: gray;
   font-size: 12px;
   margin: 5px 0;
   line-height: 1.6;
