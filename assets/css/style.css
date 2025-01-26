@@ -529,7 +529,8 @@ footer .col {
 }
 
 footer .logo {
-  width: 150px;
+  max-width: 150px;
+  max-height: 150px;
   margin-bottom: 20px;
 }
 
