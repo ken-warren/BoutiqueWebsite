@@ -529,8 +529,8 @@ footer .col {
 }
 
 footer .logo {
-  max-width: 150px;
-  max-height: 150px;
+  width: 150px;
+  height: 150px;
   margin-bottom: 20px;
 }
 
@@ -595,6 +595,7 @@ footer .copyright {
 footer img {
   margin-top: 15px 0;
   max-width: 200px;
+  display: flex;
 }
 
 /* Responsive Design */
