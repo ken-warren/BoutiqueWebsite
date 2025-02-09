@@ -2,15 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Styled by Eunique Fashions</title>
-    <link rel="icon" href="assets/img/logo1.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     />
-
+    <link rel="shortcut icon" href="assets/img/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
@@ -29,8 +29,8 @@
 
           <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#ankara">Kitenge</a></li>
-            <li><a href="#ankara">Ankara Designs</a></li>
+            <li><a href="#featured-designs">Kitenge</a></li>
+            <li><a href="#ankara-designs">Ankara Designs</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -49,23 +49,51 @@
               We sell new clothes, shoes, and bags. Expert tailoring, bespoke
               designs, and vibrant kitenge fashion to suit your unique taste.
             </p>
-            <button class="home-button">
-              <a href="#contact">Contact</a>
-            </button>
+            <a href="#contact" class="home-button">Contact</a>
+            
             <div class="home-socials">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-tiktok"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
           </div>
-          </div>
-          
         </div>
       </div>
+        
+
+      <!-- Slideshow Container -->
+      <!-- Highlights Container -->
+      <div class="highlights-container">
+        <div class="highlight small" onclick="showHighlight(this)">
+          <img src="assets/img/h3.jpg" alt="Highlight Image">
+        <div class="caption">From Concept to Creation</div>
+      </div>
+
+      <div class="highlight large" onclick="showHighlight(this)">
+        <video id = "highlightVid" autoplay muted loop>
+          <source src="assets/vid/h1.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+          <button id="playBtn" class="home-button" onclick="playVideo()">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="pauseBtn" class="home-button" onclick="pauseVideo()">
+            <i class="fas fa-pause"></i>
+          </button>
+        </div>
+        <div class="caption">Elegance in motion ~ft. linda</div>
+      </div>
+
+      <div class="highlight small" onclick="showHighlight(this)">
+        <img src="assets/img/h1.jpg" alt="Highlight Image">
+        <div class="caption">A winning look!</div>
+      </div>
+          
     </section>
 
     <!--- Kitenge --->
 
-    <section id="ankara" class="section">
+    <section id="ankara-designs" class="section">
       <h2>Featured Designs</h2>
       <p>All available</p>
       <div class="pro-container">
@@ -170,7 +198,7 @@
 
     <!--Features --->
 
-    <section id="ankara" class="section">
+    <section id="featured-designs" class="section">
       <h2>Ankara Designs On Demand</h2>
       <p>Contact for more</p>
       <div class="pro-container">
@@ -369,7 +397,7 @@
 
       <div class="copyright">
         <p>
-          <strong>EuniqueFashions ©, 2025 | All Rights Reserved</strong>
+          <strong>&copy; 2025 Eunique Fashions | All Rights Reserved</strong>
         </p>
       </div>
     
