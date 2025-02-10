@@ -165,12 +165,13 @@ svg {
 
 /* Home Section */
 #home {
-  display: contents;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100%;
+  justify-content: space-between;
+  height: 100vh;
   width: 100%;
-  padding: 0;
+  padding: 20px;
+  gap: 25px;
   position: relative; /* For overlay positioning */
   color: #fff;
   text-align: center;
@@ -194,21 +195,22 @@ svg {
 }
 
 .home-container {
+  margin-top: 20px;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 90px;
-  left: 20%;
-  padding: 20px 0;
+  text-align: center;
+  height: 60vh;
+  width: 50%;
+  padding: 50px;
   border-radius: 30px;
-  max-width: 60%;
-  margin: 0;
   background: rgba(0, 0, 0, 0.6);
 }
 
 .home-text h2 {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 10px;
   color: #fff;
@@ -231,10 +233,10 @@ svg {
 }
 
 .home-text p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
   margin: 20px 0;
-  color: #f0f0f0;
+  color: lightgray;
 }
 
 .home-button {
@@ -256,7 +258,7 @@ svg {
 }
 
 .home-button:hover {
-  background-color: rgba(200, 150, 50, 0.8);
+  background-color: rgba(200, 150, 50);
   transform: scale(1.05);
 }
 
@@ -269,25 +271,31 @@ svg {
 }
 
 .home-socials a {
-  font-size: 20px;
-  color: #fff;
+  font-size: 24px;
+  color: lightgray;
   transition: 0.3s ease;
   justify-content: center;
 }
 
-.home-socials a:hover {
+.home-socials i:hover {
   color: rgba(200, 150, 50);
+  transform: scale(1.15);
 }
 
 /* Highlights */
 .highlights-container {
+  flex: 1;
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  text-align: center;
+  height: 60vh;
+  width: 50%;
+  padding: 50px;
   gap: 25px;
-  margin-top: 0;
-  width: 100%;
-  height: 100%;
+  border-radius: 30px;
+  background: rgba(200, 80, 50, 0.2);
 }
 
 .highlight {
@@ -729,7 +737,7 @@ footer img {
     display: none;
     flex-direction: column;
     position: relative;
-    top: 60px;
+    top: 55px;
     right: 0px;
     height: 100vh;
     width: 50%;
@@ -768,13 +776,17 @@ footer img {
 
   /* Home Section */
   #home {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
     padding: 20px;
   }
 
   .home-container {
-    max-width: 90%;
+    margin-top: 50px;
+    height: auto;
+    width: 100%;
     padding: 15px;
-    left: 5%;
   }
 
   .home-text h2 {
@@ -799,8 +811,9 @@ footer img {
   }
 
   .highlights-container {
-    gap: 15px;
-    height: 80%;
+    gap: 10px;
+    width: 100%;
+    height: 50vh;
   }
 
   .highlight img,
@@ -826,7 +839,7 @@ footer img {
   #ankara-designs .pro-container,
   #featured-designs .pro-container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
 
@@ -855,6 +868,17 @@ footer img {
     height: 30px;
     line-height: 30px;
     font-size: 12px;
+  }
+
+  .about-container {
+    display: block;
+  }
+
+  #about img {
+    border-radius: 2px;
+    margin: 15px;
+    width: 100%;
+    height: auto;
   }
 
   /*contact section*/
@@ -887,7 +911,7 @@ footer img {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   /* Navigation Bar */
   .logo {
     font-size: 18px;
@@ -895,6 +919,10 @@ footer img {
 
   .navbar {
     height: 8vh;
+  }
+
+  nav ul {
+    top: 42px;
   }
 
   nav ul li {
@@ -912,42 +940,51 @@ footer img {
   /* Home Section */
   #home {
     height: 100vh;
+    padding: 20px;
   }
 
   .home-container {
-    height: auto;
+    margin-top: 50px;
+    height: 45vh;
+    width: 100%;
+    padding: 10px;
   }
 
   .home-text h2 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .home-text h1 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .home-text p {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .home-button {
     padding: 8px 15px;
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .highlights-container {
-    gap: 10px;
-    height: 70%;
+    padding: 0;
+    gap: 5px;
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 20px;
+    background-color: transparent;
   }
 
   .highlight img,
   .highlight video {
-    height: 40vh;
+    height: 30vh;
     object-position: 50% 70%;
   }
 
   .highlight video {
-    height: 45vh;
+    height: 35vh;
+    bottom: 10px;
   }
 
   .controls {
@@ -989,15 +1026,10 @@ footer img {
   }
 
   /*About section*/
-  .about-container {
-    display: block;
-  }
-
   #about img {
     border-radius: 2px;
     margin: 20px 10px;
     max-width: 100%;
-    height: auto;
   }
   /* newsletter section*/
   #newsletter {
