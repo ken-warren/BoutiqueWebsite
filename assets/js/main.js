@@ -24,9 +24,10 @@ ScrollReveal().reveal(
 );
 
 /*================ preloader =========== */
-window.addEventListener("load", function () {
-  const preloader = document.getElementById("preloader");
-  preloader.style.display = 'none';
+window.addEventListener("DOMContentLoaded", function () {
+  setTimeout(() => {
+    this.document.body.classList.add("loaded");
+  }, 1500);
 });
 
 /*================ typed Text =========== */

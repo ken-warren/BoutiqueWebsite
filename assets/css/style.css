@@ -76,6 +76,7 @@ svg {
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  transition: opacity 0.8s ease-out;
 }
 
 .loader {
@@ -94,6 +95,11 @@ svg {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.loaded #preloader {
+  opacity: 0;
+  visibility: hidden;
 }
 
 /* Navigation Bar*/
