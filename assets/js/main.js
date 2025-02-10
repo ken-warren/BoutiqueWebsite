@@ -23,6 +23,12 @@ ScrollReveal().reveal(
   { origin: "right" }
 );
 
+/*================ preloader =========== */
+window.addEventListener("load", function () {
+  const preloader = document.getElementById("preloader");
+  preloader.style.display = 'none';
+});
+
 /*================ typed Text =========== */
 const typed = new Typed(".multiple-text", {
   strings: ["Tailoring Services", "Boutique Sales", "Kitenge Designs"],
