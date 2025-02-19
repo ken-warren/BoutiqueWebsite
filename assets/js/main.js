@@ -23,14 +23,14 @@ ScrollReveal().reveal(
   { origin: "right" }
 );
 
-/*================ preloader =========== */
-window.addEventListener("DOMContentLoaded", function () {
+/*================ Preloader =========== */
+window.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
-    this.document.body.classList.add("loaded");
+    document.body.classList.add("loaded");
   }, 1500);
 });
 
-/*================ typed Text =========== */
+/*================ Typed Text =========== */
 const typed = new Typed(".multiple-text", {
   strings: ["Tailoring Services", "Boutique Sales", "Kitenge Designs"],
   typeSpeed: 100,
@@ -39,40 +39,43 @@ const typed = new Typed(".multiple-text", {
   loop: true,
 });
 
-/* Highlight Animation*/
-
+/*================ Highlight Animation =========== */
 function showHighlight(selected) {
-  let highlights = document.querySelectorAll(".highlight");
-
-  highlights.forEach((highlight) => {
-    if (highlight === selected) {
-      highlight.classList.add("active");
-    } else {
-      highlight.classList.remove("active");
-    }
+  document.querySelectorAll(".highlight").forEach((highlight) => {
+    highlight.classList.toggle("active", highlight === selected);
   });
 }
 
-/* Fast Video & Controls*/
-document.addEventListener("DOMContentLoaded", function () {
+/*================ Fast Video & Controls =========== */
+document.addEventListener("DOMContentLoaded", () => {
   const video = document.getElementById("highlightVid");
   const playBtn = document.getElementById("playBtn");
   const pauseBtn = document.getElementById("pauseBtn");
 
+  // Set faster playback speed
   video.playbackRate = 2.0;
 
+  // Ensure video starts paused
   video.pause();
-  pauseBtn.style.display = "none";
+  pauseBtn.classList.add("hidden");
 
+  // Play button event
   playBtn.addEventListener("click", () => {
     video.play();
-    playBtn.style.display = "none";
-    pauseBtn.style.display = "inline-block";
+    playBtn.classList.add("hidden");
+    pauseBtn.classList.remove("hidden");
   });
 
+  // Pause button event
   pauseBtn.addEventListener("click", () => {
     video.pause();
-    pauseBtn.style.display = "none";
-    playBtn.style.display = "inline-block";
+    pauseBtn.classList.add("hidden");
+    playBtn.classList.remove("hidden");
+  });
+
+  // Reset buttons when video ends
+  video.addEventListener("ended", () => {
+    playBtn.classList.remove("hidden");
+    pauseBtn.classList.add("hidden");
   });
 });
