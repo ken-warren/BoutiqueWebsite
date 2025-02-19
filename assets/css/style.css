@@ -319,7 +319,7 @@ svg {
 .highlights-container {
   flex: 1;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   text-align: center;
@@ -339,6 +339,7 @@ svg {
 }
 
 .highlight {
+  flex-direction: row;
   position: relative;
   width: 30%;
   overflow: visible;
