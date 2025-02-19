@@ -331,6 +331,13 @@ svg {
   background: rgba(200, 80, 50, 0.2);
 }
 
+.highlight-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
 .highlight {
   position: relative;
   width: 30%;
