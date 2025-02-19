@@ -57,25 +57,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Ensure video starts paused
   video.pause();
-  pauseBtn.classList.add("hidden");
+  pauseBtn.classList.add("none");
 
   // Play button event
   playBtn.addEventListener("click", () => {
     video.play();
-    playBtn.classList.add("hidden");
-    pauseBtn.classList.remove("hidden");
+    playBtn.classList.add("none");
+    pauseBtn.classList.remove("inline-block");
   });
 
-  // Pause button event
+    // Pause button event
   pauseBtn.addEventListener("click", () => {
     video.pause();
-    pauseBtn.classList.add("hidden");
-    playBtn.classList.remove("hidden");
-  });
-
-  // Reset buttons when video ends
-  video.addEventListener("ended", () => {
-    playBtn.classList.remove("hidden");
-    pauseBtn.classList.add("hidden");
+    pauseBtn.classList.add("none");
+    playBtn.classList.remove("inline-block");
   });
 });
